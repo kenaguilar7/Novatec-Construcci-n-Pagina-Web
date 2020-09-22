@@ -5,13 +5,13 @@
     </svg>
   </a>
   <div class="header-logo-container">
-    {{ if eq .Section "novatec-construccion" }}
-      <a href="/novatec-construccion/"><img src="/images/logos/NC.png" alt="Logo Description" class="header-logo"></a>
-    {{ else }}
-      <a class="header-logo-link" href="/">
+
+    <a href="/novatec-construccion/"><img src="/images/logos/NC.png" alt="Logo Description" class="header-logo"></a>
+
+    <!-- <a class="header-logo-link" href="/">
         <img width="178" height="49" src="/logo.svg" alt="Novatec" class="header-logo">
-      </a>
-    {{ end }}
+      </a> -->
+
   </div>
   <nav id="main-nav" role="navigation">
     <div class="cerrar-main-nav">
@@ -21,29 +21,36 @@
     {{ $currentPage := . }}
     <ul class="first-level">
       {{ range .Site.Menus.principal }}
-        {{ if .HasChildren }}
-          <li class="first-level-item{{if or ($currentPage.HasMenuCurrent "principal" .) ($currentPage.IsMenuCurrent "principal" .) }} active{{end}}">
-            <a class="first-level-link" href="{{.URL}}">
-              {{ .Name }}
-              <svg viewBox="0 0 8 8" class="caret">
-                <use xlink:href="/open-iconic.svg#caret-bottom"></use>
-              </svg>
-            </a>
-            <ul class="second-level">
-              {{ range .Children.ByWeight }}
-                <li class="second-level-item{{if $currentPage.IsMenuCurrent "principal" . }} active{{end}}">
-                  <a class="second-level-link" href="{{.URL}}"> {{ .Name }} </a>
-                </li>
-              {{ end }}
-            </ul>
+      {{ if .HasChildren }}
+      <li
+        class="first-level-item{{if or ($currentPage.HasMenuCurrent "principal" .) ($currentPage.IsMenuCurrent "principal" .) }} active{{end}}">
+        <a class="first-level-link" href="{{.URL}}">
+          {{ .Name }}
+          <svg viewBox="0 0 8 8" class="caret">
+            <use xlink:href="/open-iconic.svg#caret-bottom"></use>
+          </svg>
+        </a>
+        <ul class="second-level">
+          {{ range .Children.ByWeight }}
+          <li class="second-level-item{{if $currentPage.IsMenuCurrent "principal" . }} active{{end}}">
+            <a class="second-level-link" href="{{.URL}}"> {{ .Name }} </a>
           </li>
-        {{ else }}
-          <li class="first-level-item{{if or ($currentPage.IsMenuCurrent "principal" .) ($currentPage.HasMenuCurrent "principal" .) }} active{{end}}">
-            <a class="first-level-link" href="{{.URL}}">{{ .Name }}</a>
-          </li>
-        {{ end }}
-        </li>
+          {{ end }}
+        </ul>
+      </li>
+      {{ else }}
+      <li
+        class="first-level-item{{if or ($currentPage.IsMenuCurrent "principal" .) ($currentPage.HasMenuCurrent "principal" .) }} active{{end}}">
+        <a class="first-level-link" href="{{.URL}}">{{ .Name }}</a>
+      </li>
       {{ end }}
+      </li>
+      {{ end }}
+     
+      <a class="header-logo-link" id="header-logo-industrial-link" href="/">
+        <img width="178" height="49" src="/logo.svg" alt="Novatec" class="header-logo">
+      </a>
+     
     </ul>
   </nav>
   <section role="search" class="header-search">

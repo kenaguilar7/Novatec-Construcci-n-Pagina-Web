@@ -17,7 +17,7 @@
         {{ end }}
         {{ .Content }}
       </div>
-      <div class="industria-page-productos">
+      <!-- <div class="industria-page-productos">
         <h2>Productos</h2>
         <ul class="pages-list">
         {{ $array := slice .Title }}
@@ -37,19 +37,8 @@
             </li>
           {{ end }}
         </ul>
-      </div>
-      <div class="industria-page-marcas">
-        <h2>Marcas</h2>
-        <ul class="pages-list">
-          {{ $current_marcas := $.Scratch.Get "marcas" }}
-          {{ range uniq $current_marcas }}
-            {{ $brand := $.Site.GetPage (print "/marcas/" (urlize (index .)) ) }}
-            {{ with $brand }}
-              <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-            {{ end }}
-          {{ end }}
-        </ul>
-      </div>
+      </div> -->
+
     </div>
   </div>
 {{ end }}

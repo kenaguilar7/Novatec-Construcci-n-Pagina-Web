@@ -40,11 +40,6 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: content/servicio-tecnico
-  label: Servicio tecnico
-  create: all
-  match: "**/*"
-- type: directory
   path: content/productos
   label: Productos
   create: all

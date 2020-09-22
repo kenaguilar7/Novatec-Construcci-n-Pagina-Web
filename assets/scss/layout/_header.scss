@@ -106,7 +106,7 @@
     }
 
     &:hover {
-      background: $azul;
+      background: $naranja;
       color: $blanco;
       text-decoration: none;
 
@@ -121,9 +121,9 @@
     }
 
     &.active {
-      background: $azul;
+      background: $naranja;
       @include grid-media($desktop-grid) {
-        background: $azul;
+        background: $naranja;
       }
       
       .first-level-link {
@@ -200,12 +200,12 @@
   .active.second-level-item {
 
     & a {
-        color: $azul;
+        color: $naranja;
         font-weight: bold;
       }
 
     @include grid-media($desktop-grid) {
-      background: $azul;
+      background: $naranja;
 
       & a {
         color: $blanco;
@@ -262,4 +262,8 @@
   @include grid-media($desktop-grid) {
     display: none;
   }
+}
+
+#header-logo-industrial-link {
+  margin-left: 20px;
 }

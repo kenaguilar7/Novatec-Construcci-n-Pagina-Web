@@ -1,64 +1,23 @@
 {{ define "main" }}
 
-    {{ partial "page-title.html" . }}
-    <div class="container">
-      <section id="industrias-block">
-        {{ range where (where .Data.Pages.ByWeight ".Params.id" "!=" nil) ".Params.draft" "!=" true }}
-          <div class="industria-title" id="{{ urlize .Title }}">{{ .Title | plainify}}</div>
-          <div class="industria-block">
-            <div class="grid-container">
-              <div class="industria-detalles">
-                  {{ with .Params.imagen }}<img src="{{ $.Site.Params.cloudinary_url }}{{ . }}" alt="" />{{ end }}
-                  <a class="btn btn-primary" href="{{ .Permalink }}">Ver más información</a>
-              </div>
+{{ partial "page-title.html" . }}
+<div class="container">
+  
+    <ul class="product-grid">
 
-              <div class="industria-productos">
-                <h3>Productos</h3>
-                {{ $array := slice .Title }}
-                {{ $.Scratch.Set "marcas" (slice "") }}
-                {{ $paginas := where .Site.RegularPages "Params.industrias" "intersect" $array }}
-                <ul>
-                  {{ range $paginas }}
 
-                    {{ with .Params.marcas}}
-                      {{ range . }}
-                        {{ $.Scratch.Add "marcas" (slice .) }}
-                      {{ end }}
-                    {{ end}}
-                    
-                    <li>
-                      <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </li>
-                  {{ end }}
-                </ul>
-              </div>
-
-              <div class="industria-marcas">
-                <h3>Marcas</h3>
-                <ul>
-                  {{ $current_marcas := $.Scratch.Get "marcas" }}
-                  {{ range uniq $current_marcas }}
-                    {{ $brand := $.Site.GetPage (print "/marcas/" (urlize (index .)) ) }}
-                    {{ with $brand }}
-                      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                    {{ end }}
-                  {{ end }}
-                </ul>
-                
-              </div>
-
-            </div>
+      {{ range where (where .Data.Pages.ByWeight ".Params.id" "!=" nil) ".Params.draft" "!=" true }}
+      <li class="product-grid-block">
+        <a href="{{ .Permalink }}">
+          <div>
+              <img src="{{ $.Site.Params.cloudinary_url }}{{ . }}" alt="{{ .Title }}">
           </div>
-          {{ .Scratch.Delete "marcas" }}
-        {{ end }}
-      </section>
-      <nav id="industrias-nav">
-        <ul>
-          {{ range .Data.Pages.ByWeight }}
-            <li><a href="#{{ urlize .Title }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
-
-
-{{ end }}
+          <div class="product-block-title" >
+              <h3>{{ .Title }}</h3>
+          </div>
+        </a>
+      </li>
+      {{ .Scratch.Delete "marcas" }}
+      {{ end }}
+    </ul>
+  {{ end }}

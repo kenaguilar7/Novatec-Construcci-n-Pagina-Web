@@ -1,7 +1,7 @@
 DefaultContentLanguage = "es"
 baseURL = "https://www.novatec.cr/"
 languageCode = "es-cr"
-title = "Novatec Industrial"
+title = "Novatec Construcción"
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.42.2"
 [params]

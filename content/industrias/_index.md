@@ -1,5 +1,5 @@
 ---
-title: Industrias
+title: Servicios
 weight: "900"
 menu:
   principal:
