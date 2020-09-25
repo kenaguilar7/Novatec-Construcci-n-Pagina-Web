@@ -2,6 +2,11 @@
 title: Inicio
 description: Especialistas en soluciones para el manejo y sellado de fluidos
 slides:
+- title: Eucofast
+  description: ''
+  image: "/./product-for-delivery.JPG"
+  published: true
+  link: ''
 - title: Fibra Tyffstrand
   description: Descripción
   image: "/./fibra-tuffstrand-f.jpg"
