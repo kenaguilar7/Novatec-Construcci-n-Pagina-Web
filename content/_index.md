@@ -2,6 +2,11 @@
 title: Inicio
 description: Especialistas en soluciones para el manejo y sellado de fluidos
 slides:
+- title: Fibra Tyffstrand
+  description: Descripción
+  image: "/./fibra-tuffstrand-f.jpg"
+  published: true
+  link: ''
 - title: Laboratorio
   description: Descripción Lab
   image: "/./development-laboratory.JPG"
