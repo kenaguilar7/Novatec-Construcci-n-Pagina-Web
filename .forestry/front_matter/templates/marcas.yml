@@ -64,11 +64,3 @@ fields:
   label: Logo
   name: logo
   description: Archivo jpg o png del logo. El tamaño se ajusta automáticamente
-pages:
-- content/marcas/euclid-chemical.md
-- content/marcas/kaivac.md
-- content/marcas/key-resin.md
-- content/marcas/miltonroy.md
-- content/marcas/rexroth.md
-- content/marcas/tremco.md
-- content/ncmarcas/stego.md

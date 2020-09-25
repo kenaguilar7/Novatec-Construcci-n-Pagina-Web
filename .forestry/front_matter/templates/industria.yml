@@ -64,5 +64,3 @@ fields:
   type: text
   hidden: false
   default: ''
-pages:
-- content/novatec-construccion/adherentes/_index.md

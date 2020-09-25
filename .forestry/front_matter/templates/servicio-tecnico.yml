@@ -16,5 +16,3 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-pages:
-- content/servicio-tecnico/reparacion-de-bombas.md
