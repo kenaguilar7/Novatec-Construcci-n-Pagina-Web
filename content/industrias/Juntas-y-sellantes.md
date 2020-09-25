@@ -1,6 +1,6 @@
 ---
-title: "Instalación de barreras de vapor"
-id: "2"
+title: "Juntas  y Sellantes"
+id: "4"
 imagen: ""
 link: ''
 catalogo: ''
@@ -11,4 +11,5 @@ menu:
   principal:
     parent: Servicios
     weight: 10
+
 ---

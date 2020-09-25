@@ -7,4 +7,4 @@ menu:
     parent: ''
 
 ---
-Todas las industrias
+Todos los servicios
