@@ -21,6 +21,7 @@
     {{ end }}
     {{ block "main" . }}
     {{ end }}
+    {{ partial "marcas-home.html" .}}
   </main>
   {{ partial "footer.html" . }}
   {{ if eq (getenv "LOCAL_DEV") "true" }}

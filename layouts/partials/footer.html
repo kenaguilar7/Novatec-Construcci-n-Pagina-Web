@@ -1,12 +1,7 @@
 <footer id="footer">
   <div class="container">
   <section class="footer-section">
-    {{ if eq .Section "novatec-construccion" }}
-      <h3>NVTConstucción S.A.</h3>
-    {{ else }}
-      <h3>Novatec Industrial S.A.</h3>
-    {{ end }}
-
+    <h3>Novatec Constucción S.A.</h3>
     <p>
       <svg viewBox="0 0 8 8" class="icon">
         <use xlink:href="/open-iconic.svg#globe"></use>
@@ -55,35 +50,12 @@
         </a>
       </li>
       <li>
-        {{ if eq .Section "novatec-construccion" }}
-          {{ $email := "ventas-nc@novatec.cr" }}
-          <a href="mailto:{{ $email }}" target="_top">
-            <svg viewBox="0 0 8 8" class="icon">
-              <use xlink:href="/open-iconic.svg#envelope-closed"></use>
-            </svg>  {{ $email }}
-          </a>
-        {{ else }}
-          {{ $email := "info@novatec.cr" }}
-          <a href="mailto:{{ $email }}" target="_top">
-            <svg viewBox="0 0 8 8" class="icon">
-              <use xlink:href="/open-iconic.svg#envelope-closed"></use>
-            </svg> 
-            {{ $email }}
-          </a>
-        {{ end }}
-      </li>
-      <li>
-        {{ if eq .Section "novatec-construccion" }}
-
-        {{ else }}
-          {{ $email := "ventas@novatec.cr" }}
-          <a href="mailto:{{ $email }}" target="_top">
-            <svg viewBox="0 0 8 8" class="icon">
-              <use xlink:href="/open-iconic.svg#envelope-closed"></use>
-            </svg> 
-            {{ $email }}
-          </a>
-        {{ end }}
+        {{ $email := "sac-nc@novatec.cr" }}
+        <a href="mailto:{{ $email }}" target="_top">
+          <svg viewBox="0 0 8 8" class="icon">
+            <use xlink:href="/open-iconic.svg#envelope-closed"></use>
+          </svg>  {{ $email }}
+        </a>
       </li>
     </ul>
   </section>
@@ -110,7 +82,7 @@
 </div>
   <div class="legal-footer">
     <div class="container">
-      Copyright ©{{ .Date.Format "2006" }} Novatec Industrial. Todos los derechos reservados.
+      Copyright ©{{ .Date.Format "2006" }} Novatec Construcción. Todos los derechos reservados.
     </div>
   </div>
 </footer>
